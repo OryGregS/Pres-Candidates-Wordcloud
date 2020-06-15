@@ -77,23 +77,3 @@ for user_name in twitterUserNames:
     plt.savefig('2020PresWords/' + user_name + '_words.png')
     plt.show()
 
-
-# In[117]:
-
-
-wc = WordCloud(stopwords=words_to_remove, mask = mask, background_color="black", max_words=1000)
-clean_string = ','.join(words)
-wc.generate(clean_string)
-
-f = plt.figure(figsize=(50,50))
-plt.imshow(wc, interpolation='bilinear')
-plt.title('Twitter Generated WordCloud for @' + user_name, size=40)
-plt.axis("off")
-plt.show()
-
-
-# In[ ]:
-
-
-
-
